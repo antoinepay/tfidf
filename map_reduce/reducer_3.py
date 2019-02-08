@@ -27,11 +27,11 @@ for line in sys.stdin:
         buffer.append((word, doc, count, f))
     elif current_word != word:
         for b in buffer:
-            idf = math.log2(number_of_docs_with_word / D)
+            idf = math.log(float(D) / float(number_of_docs_with_word))
             val = doc + ' ' + str(float(b[3]) * idf)
             print('%s\t%s' % (word, val))
         if len(buffer) == 0:
-            idf = math.log2(number_of_docs_with_word / D)
+            idf = math.log(float(D) / float(number_of_docs_with_word))
             val = doc + ' ' + str(float(f) * idf)
             print('%s\t%s' % (word, val))
 

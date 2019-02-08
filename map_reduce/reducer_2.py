@@ -3,8 +3,6 @@
 import sys
 from collections import Counter
 
-current_doc = None
-
 counter = Counter()
 lines = []
 
@@ -15,6 +13,6 @@ for line in sys.stdin:
     lines.append((doc, word, count))
 
 for line in lines:
-    f = int(line[2]) / counter[line[0]]
+    f = float(line[2]) / counter[line[0]]
     print('%s\t%s' % (line[1] + ' ' + line[0], line[2] + ' ' + str(f)))
 
