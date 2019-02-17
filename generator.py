@@ -1,7 +1,7 @@
 import os
 import random
 
-WORDS = random.sample(list(map(lambda x: x.strip(), open('words_en.txt', 'r'))), k=500)
+WORDS = list(map(lambda x: x.strip(), open('words_en.txt', 'r')))
 
 line = 1
 
