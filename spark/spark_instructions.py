@@ -1,7 +1,7 @@
 import time
 import numpy as np
 from pyspark import SparkContext
-sc = SparkContext.getOrCreate().
+sc = SparkContext.getOrCreate()
 
 t0 = time.time()
 # Create a corpus of document
